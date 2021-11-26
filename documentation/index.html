@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>prueba_sanitas documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+        <link rel="stylesheet" href="./styles/vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">prueba_sanitas documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<br />
+<div align="center">
+    <img src="src/assets/img/logo.jpg" alt="Logo" width="200" height="150">
+    <h3 align="center">Ionic Login Example App</h3>
+</div>
+
+<h2 id="contenido">Contenido</h2>
+<ul>
+<li><a href="#sobre-el-proyecto">Sobre el proyecto</a></li>
+<li><a href="#pila-tecnol%C3%B3gica">Pila tecnológica</a></li>
+<li><a href="#test">Test</a></li>
+<li><a href="#ejecutar-el-proyecto">Ejecutar el proyecto</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+<hr>
+<h2 id="sobre-el-proyecto">Sobre el proyecto</h2>
+<div align="center">
+    <img src="docs/assets/img/Mobile.png" alt="Logo" width="250" height="400">
+</div>
+
+<p>En este proyecto se ha implementado una aplicación sencilla, que consta de una pantalla de login, la cual esta maquetada a partir de la captura de pantalla disponible para dispositivos móviles. Esta pantalla cuenta con validacion y control de formularios mediante <a href="https://angular.io/guide/reactive-forms">Reactive Forms</a> del Framework Angular. El proyecto contiene los siguientes ejemplos de desarrollo:</p>
+<h3 id="maquetación">Maquetación:</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> El proyecto ha sido maquetado a partir de una captura de pantalla usando para ello SCSS como preprocesador de CSS y HTML como lenguaje de marcado.</li>
+<li><input checked="" disabled="" type="checkbox"> La maquetación cumple con el diseño responsive y tiene un breakpoint de 960px.<h3 id="validación-de-formularios">Validación de formularios:</h3>
+</li>
+<li>Todos los campos de formulario de login seran validados con las siguientes reglas.</li>
+<li><input checked="" disabled="" type="checkbox"> El campo de email no puede estar vacio.</li>
+<li><input checked="" disabled="" type="checkbox"> El campo de email debe de coincidir con la expresión regular <code>^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$</code>.</li>
+<li><input checked="" disabled="" type="checkbox"> El campo password no puede estar vacio.</li>
+<li><input checked="" disabled="" type="checkbox"> El campo password debe de tener una longitud minima de 5 caracteres.</li>
+<li><input checked="" disabled="" type="checkbox"> El formulario cuenta con un switch para recordar los datos de usuario. El switch es de tipo booleano y opcional.</li>
+<li><input checked="" disabled="" type="checkbox"> El botón de aceptar siempre esta activo, si el formulario contiene errores estos aparecen al pulsar el botón, en caso contrario se ejecuta la acción de login y muestra por pantalla los datos introducidos.<h3 id="test">Test:</h3>
+</li>
+<li><input checked="" disabled="" type="checkbox"> Test unitarios.</li>
+<li><input disabled="" type="checkbox"> Test E2E.</li>
+<li><input checked="" disabled="" type="checkbox"> Test de componentes.</li>
+</ul>
+<p><a href="#contenido">Ir arriba</a></p>
+<hr>
+<h2 id="pila-tecnológica">Pila tecnológica</h2>
+<p>Ionic es un framework que actua como wrapper para unir tecnologías que permiten la creación de aplicaciones multiplataforma, mediante el uso de tecnologías web. Por ello Ionic permite desarrollar aplicaciones para escritorio mediante <a href="https://electronjs.org/">Electron</a>, y para móviles mediante <a href="https://cordova.apache.org/">Cordova</a> o <a href="https://">Capacitor</a> y para web mediante <a href="https://">Angular</a>, <a href="">React</a> o <a href="">Vue</a>. En este caso el proyecto esta orientado a tecnologías móviles, por lo que la pila tecnologica de este esta compuesta por los siguientes frameworks:</p>
+<ul>
+<li><a href="https://nextjs.org/">Ionic</a></li>
+<li><a href="https://reactjs.org/">Angular</a></li>
+<li><a href="https://vuejs.org/">Cordova</a></li>
+<li><a href="https://angular.io/">Node</a></li>
+</ul>
+<p><a href="#contenido">Ir arriba</a></p>
+<hr>
+<h2 id="test-1">Test</h2>
+<p>El proyecto lleva implementado una serie de test en el framework <a href="https://jasmine.github.io/">Jassmine</a>. Para lanzar los test y comprobar que todo el proyecto funciona de forma correcta solo es necesario lanzar el siguiente comando:</p>
+<div><pre class="line-numbers"><code class="language-shell">ng test</code></pre></div><hr>
+<h2 id="ejecutar-el-proyecto">Ejecutar el proyecto</h2>
+<p>Para ejecutar este proyecto es necesario que el equipo cuente con las siguientes tecnologías instaladas:</p>
+<ul>
+<li><a href="https://nodejs.org/es/">Node.js</a></li>
+<li><a href="https://ionicframework.com/docs/cli/">Ionic-CLI</a></li>
+</ul>
+<p>Una vez instaladas estas tecnologías, solo es necesario clonar este repositorio al equipo donde va a ejecutarse. Con un terminal ha de acceder al directorio raíz del proyecto y ejecutar el siguiente comando para instalar los paquetes necesarios:</p>
+<div><pre class="line-numbers"><code class="language-none">npm install</code></pre></div><p>Una vez los paquetes estan instalados es puede optar por ejecutar el proyecto mediante un navegador o mediante un dispositivo movil fisico o emulado. Para la ejecución mediante navegador solo es necesario que se ejecute el siguiente comando:</p>
+<div><pre class="line-numbers"><code class="language-none">ionic serve</code></pre></div><p>Para la ejecución en dispositivo fisico o emulado es necesario una configuración extra, así como la instalación de una aplicación de desarrollo para Android o iOS y la adecuada configuración del equipo, para mas información puede seguir este <a href="https://ionicframework.com/docs/developing/android">enlace</a> para dispositivos Android y <a href="https://ionicframework.com/docs/developing/ios">este</a> para dispositivos iOS.</p>
+<hr>
+<h2 id="contacto">Contacto</h2>
+<p>Juan Antonio Contreras Fernández - <a href="mailto:&#106;&#x75;&#97;&#x6e;&#x61;&#110;&#116;&#111;&#x6e;&#x69;&#x6f;&#x2e;&#99;&#111;&#x6e;&#116;&#x72;&#101;&#x72;&#x61;&#x73;&#x40;&#105;&#116;&#x65;&#x72;&#x69;&#97;&#109;&#x2e;&#x65;&#115;">&#106;&#x75;&#97;&#x6e;&#x61;&#110;&#116;&#111;&#x6e;&#x69;&#x6f;&#x2e;&#99;&#111;&#x6e;&#116;&#x72;&#101;&#x72;&#x61;&#x73;&#x40;&#105;&#116;&#x65;&#x72;&#x69;&#97;&#109;&#x2e;&#x65;&#115;</a></p>
+<p>TODO añadir el enlace al proyecto.</p>
+<p>Project Link: <a href="https://github.com/JuanAContreras/ionic-login-example-app.git">https://github.com/JuanAContreras/ionic-login-example-app.git</a></p>
+<p><a href="#contenido">Ir arriba</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

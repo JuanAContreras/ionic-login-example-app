@@ -1,0 +1,123 @@
+/** breakpoints **/
+
+$custom-size: 980px;
+$mobile-portrait: 640px;
+@mixin custom {
+    @media (min-width: $custom-size) {
+        @content;
+    }
+}
+
+
+/** Animations **/
+
+@mixin mobile-portrait {
+    @media (min-width: $mobile-portrait) {
+        @content;
+    }
+}
+
+@keyframes form {
+    from {
+        background: rgba( 255, 255, 255, 0.0);
+    }
+    to {
+        background: rgba( 255, 255, 255, 0.5);
+    }
+}
+
+@keyframes button {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 44px;
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.login-page {
+    --background: #fff url(../../assets/img/background.jpg) no-repeat center center / cover;
+    .form-layout {
+        width: calc(100% / 1.1);
+        margin: auto;
+        @include mobile-portrait {
+            width: calc(100% / 1.4);
+        }
+        @include custom {
+            width: calc(100% / 1.8);
+        }
+        .login-form {
+            padding: 0px 0px 0px 0px;
+            .form-logo {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 10%;
+                ion-img {
+                    width: 120px;
+                    height: 120px;
+                    object-fit: cover;
+                    object-position: left;
+                    margin-bottom: 10px;
+                }
+            }
+            .form-body {
+                background: rgba( 255, 255, 255, 0.5);
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+                backdrop-filter: blur( 6px);
+                -webkit-backdrop-filter: blur( 6px);
+                padding: 0px 0px 0px 0px;
+                margin: auto;
+                margin-top: 25px;
+                width: 80%;
+                animation-name: form;
+                animation-duration: 4s;
+                ion-item {
+                    --background: rgba( 255, 255, 255, 0.2);
+                    box-shadow: transparent;
+                }
+                .validator-error {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 10px;
+                    color: red;
+                    font-size: small;
+                    text-align: right;
+                    animation-name: shake;
+                    animation-duration: 0.7s;
+                }
+                .remember-item {
+                    --background: transparent;
+                    box-shadow: transparent;
+                    max-height: 44px;
+                }
+            }
+        }
+        .login-button {
+            margin: 0px 0px 0px 0px;
+            height: 44px;
+            animation-name: button;
+            animation-duration: 2s;
+        }
+    }
+}
