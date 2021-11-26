@@ -100,9 +100,7 @@ Para la ejecución en dispositivo fisico o emulado es necesario una configuraci�
 ---
 ## Contacto
 
-Juan Antonio Contreras Fernández - juanantonio.contreras@iteriam.es
-
-TODO añadir el enlace al proyecto.
+Juan Antonio Contreras Fernández
 
 Project Link: [https://github.com/JuanAContreras/ionic-login-example-app.git](https://github.com/JuanAContreras/ionic-login-example-app.git)
 
