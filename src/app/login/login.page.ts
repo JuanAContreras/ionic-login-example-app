@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Platform } from '@ionic/angular';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class LoginPage implements OnInit {
   passwordMask = false;
   formValidation = false;
 
-  constructor(private FormBuilder: FormBuilder) {
+  constructor(private FormBuilder: FormBuilder,
+    private platform: Platform) {
     this.loginForm = this.FormBuilder.group({
       email: [null, [Validators.required, Validators.email]],
       pass: [null, [Validators.required, Validators.minLength(5)]],
@@ -69,5 +71,12 @@ export class LoginPage implements OnInit {
         return this.loginForm.controls.pass.errors != null ?  this.loginForm.controls.pass.errors.minlength : false;
       }
     }
+  }
+
+  /**
+   * Devuelve True cuando la SPA esta ejecutandose en un dispositivo móvil.
+   */
+  public isMobile(){
+    return this.platform.platforms().includes('android') || this.platform.platforms().includes('ios');
   }
 }

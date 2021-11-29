@@ -1,7 +1,7 @@
 <ion-content class="login-page">
     <div class="form-layout">
         <ion-grid class="login-form">
-            <ion-row>
+            <ion-row class="logo-bg">
                 <ion-col class="form-logo" size="12">
                     <ion-img src="assets/img/logo.jpg"></ion-img>
                 </ion-col>
@@ -52,8 +52,8 @@
                 </ion-col>
             </ion-row>
         </ion-grid>
-        <div>
-            <ion-button class="login-button" expand="full" (click)="login()">Acceder</ion-button>
+        <div class="button-container">
+            <ion-button class="login-button" [expand]="isMobile() ? 'full' : 'block'" [shape]="isMobile() ? 'undefined' : 'round'" [fill]="isMobile() ? 'solid' : 'outline' " (click)="login()">Acceder</ion-button>
         </div>
     </div>
 </ion-content>
