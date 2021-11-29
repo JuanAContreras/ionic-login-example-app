@@ -16,10 +16,10 @@
                                         <ion-icon name="person" slot="start"></ion-icon>
                                         <ion-input id="email" type="email" placeholder="Email" formControlName="email"></ion-input>
                                     </ion-item>
-                                    <div class="validator-error" *ngIf="formIsValid('email-required')">
+                                    <div class="validator-error" *ngIf="emailValid('email-required')">
                                         El campo no puede estar vacío.
                                     </div>
-                                    <div class="validator-error" *ngIf="formIsValid('email-format')">
+                                    <div class="validator-error" *ngIf="emailValid('email-format')">
                                         Email no válido.
                                     </div>
                                 </ion-col>
@@ -31,10 +31,10 @@
                                         <ion-input id="pass" [type]="passwordMask ? 'text' : 'password'" placeholder="Contraseña" formControlName="pass"></ion-input>
                                         <ion-icon id="passMask" class="password-mask" [name]="passwordMask ? 'eye-off' : 'eye'" slot="end" (click)="show_password()"></ion-icon>
                                     </ion-item>
-                                    <div class="validator-error" *ngIf="formIsValid('pass-required')">
+                                    <div class="validator-error" *ngIf="passValid('pass-required')">
                                         El campo no puede estar vacio.
                                     </div>
-                                    <div class="validator-error" *ngIf="formIsValid('pass-length')">
+                                    <div class="validator-error" *ngIf="passValid('pass-length')">
                                         El campo debe tener al menos 5 caracteres.
                                     </div>
                                 </ion-col>

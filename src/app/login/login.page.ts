@@ -13,7 +13,7 @@ export class LoginPage implements OnInit {
   passwordMask = false;
   formValidation = false;
 
-  constructor(public FormBuilder: FormBuilder) {
+  constructor(private FormBuilder: FormBuilder) {
     this.loginForm = this.FormBuilder.group({
       email: [null, [Validators.required, Validators.email]],
       pass: [null, [Validators.required, Validators.minLength(5)]],
@@ -41,20 +41,32 @@ export class LoginPage implements OnInit {
     }
   }
 
-  public formIsValid(input: String) {
-    if(this.formValidation){
-      switch (input) {
-        case 'email-required':
-          return this.loginForm.controls.email.errors != null ? this.loginForm.controls.email.errors.required : false;
+  /**
+   * Comprueba que el campo email sea correcto y muestra los errores si existen.
+   * @param type
+   * @returns
+   */
+  public emailValid(type: string){
+    if(this.formValidation && this.loginForm.controls.email.errors != null){
+      if (type === 'email-required'){
+        return this.loginForm.controls.email.errors.required;
+      } else if(type === 'email-format'){
+        this.loginForm.controls.email.errors.email
+      }
+    }
+  }
 
-        case 'email-format':
-          return this.loginForm.controls.email.errors != null ? this.loginForm.controls.email.errors.email : false;
-
-        case 'pass-required':
-          return this.loginForm.controls.pass.errors != null ? this.loginForm.controls.pass.errors.required : false;
-
-        case 'pass-length':
-          return this.loginForm.controls.pass.errors != null ? this.loginForm.controls.pass.errors.minlength : false;
+  /**
+   * Comprueba que el campo password sea correcto y muestra los errores si existen.
+   * @param type
+   * @returns
+   */
+  public passValid(type: string){
+    if(this.formValidation && this.loginForm.controls.email.errors != null){
+      if (type === 'pass-required'){
+        return this.loginForm.controls.pass.errors.required;
+      } else if(type === 'pass-length'){
+        this.loginForm.controls.pass.errors.minlength;
       }
     }
   }
