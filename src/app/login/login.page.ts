@@ -47,11 +47,11 @@ export class LoginPage implements OnInit {
    * @returns
    */
   public emailValid(type: string){
-    if(this.formValidation && this.loginForm.controls.email.errors != null){
+    if(this.formValidation){
       if (type === 'email-required'){
-        return this.loginForm.controls.email.errors.required;
+        return this.loginForm.controls.email.errors != null ? this.loginForm.controls.email.errors.required : false;
       } else if(type === 'email-format'){
-        this.loginForm.controls.email.errors.email
+        return this.loginForm.controls.email.errors != null ? this.loginForm.controls.email.errors.email : false;
       }
     }
   }
@@ -62,11 +62,11 @@ export class LoginPage implements OnInit {
    * @returns
    */
   public passValid(type: string){
-    if(this.formValidation && this.loginForm.controls.email.errors != null){
+    if(this.formValidation){
       if (type === 'pass-required'){
-        return this.loginForm.controls.pass.errors.required;
+        return this.loginForm.controls.pass.errors != null ? this.loginForm.controls.pass.errors.required : false;
       } else if(type === 'pass-length'){
-        this.loginForm.controls.pass.errors.minlength;
+        return this.loginForm.controls.pass.errors != null ?  this.loginForm.controls.pass.errors.minlength : false;
       }
     }
   }
